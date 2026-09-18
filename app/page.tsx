@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Phone, MapPin, Clock, ArrowRight, Sparkles, CalendarDays } from "lucide-react";
+import { Phone, MapPin, Clock, ArrowRight, Sparkles, CalendarDays, Wallet, CalendarPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
 
@@ -46,16 +46,16 @@ export default function Home() {
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Button asChild size="lg">
-              <a href="tel:+38(077)6090000">
-                <Phone className="h-4 w-4" />
-                +38 (077) 609-00-00
+              <a href="tel:+38(077)6090000" className="inline-flex items-center gap-2">
+                <Phone className="h-5 w-5 flex-shrink-0" />
+                <span>+38 (077) 609-00-00</span>
               </a>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/book/povna-diagnostyka">
-                <CalendarDays className="h-4 w-4" />
-                Записатись онлайн
-                <ArrowRight className="h-4 w-4" />
+              <Link href="/book/povna-diagnostyka" className="inline-flex items-center gap-2">
+                <CalendarDays className="h-5 w-5 flex-shrink-0" />
+                <span>Записатись онлайн</span>
+                <ArrowRight className="h-5 w-5 flex-shrink-0" />
               </Link>
             </Button>
           </div>
@@ -71,9 +71,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Повна комп&apos;ютерна діагностика</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Сканування всіх систем: двигун, КПП, ABS, клімат.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">600 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                600 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/zamіna-masla-rsa" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -81,9 +87,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Заміна моторної оливи</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Заміна оливи та фільтрів. Перевірка рівнів.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">600 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                600 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/remont-dvyhuna-rsa" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -91,9 +103,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Ремонт двигуна</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Капітальний ремонт двигунів усіх типів.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">35000 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                35000 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/remont-kpp-rsa" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -101,9 +119,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Ремонт КПП</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Ремонт МКПП/АКПП. Заміна зчеплення.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">18000 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                18000 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/rozval-rsa" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -111,9 +135,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Розвал-сходження 3D</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Розвал на 3D стенді Hunter.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">600 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                600 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/galma-rsa" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -121,9 +151,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Ремонт гальм</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Колодки, диски, супорти, прокачка. ABS.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">2500 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                2500 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/elektryka-rsa" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -131,9 +167,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Ремонт електрики</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Стартер, генератор, проводка, світло, клімат.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">1500 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                1500 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/klimат-rsa" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -141,9 +183,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Заправка кондиціонера</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Заправка, діагностика, антибактеріальна обробка.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">1200 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                1200 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
           <Link href="/book/zcheplennia-rsa" className="group flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 transition-all hover:border-indigo-300 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-950">
@@ -151,9 +199,15 @@ export default function Home() {
               <h3 className="text-lg font-semibold">Заміна зчеплення</h3>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Заміна комплекту зчеплення. Всі типи КПП.</p>
             </div>
-            <div className="text-right">
-              <div className="text-xl font-bold text-indigo-600 dark:text-indigo-400">7500 ₴</div>
-              <div className="mt-1 text-xs text-zinc-500">Записатись →</div>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                <Wallet className="h-4 w-4 flex-shrink-0" />
+                7500 ₴
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <CalendarPlus className="h-3.5 w-3.5 flex-shrink-0" />
+                Записатись
+              </span>
             </div>
           </Link>
         </div>
